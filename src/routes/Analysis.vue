@@ -1,33 +1,33 @@
 <!--
-VFS VUE Single File Component
+AnalysisController File Component
 
 <pg-about name="User"></pg-about>
 
-Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
+Copyright (c) 2018. Daiyong Kim, Kibble Online Inc. All Rights Reserved.
 -->
 <template>
 
 
-    <section class="about-container">
+    <section class="analysis-container">
 
-        <div class="about">{{ name }} your Vue.js App</div>
+        <div class="Analysis">{{ name }} your Vue.js App</div>
     </section>
 
 </template>
 <script>
     import Controller from '@/mixins/controller'
 
-    class AboutController extends Controller {
+    class AnalysisController extends Controller {
 
         constructor( name, subComponentList = []) {
             super( name, subComponentList );
             this.vm = {
-                name: 'About',
+                name: 'Analysis',
             }
         }
     }
 
-    export default new AboutController('pgAbout');
+    export default new AnalysisController('pgAnalysis');
 
 </script>
 <style>

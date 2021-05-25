@@ -8,13 +8,18 @@ import Vue from 'vue'
 import Router from 'vue-router';
 Vue.use( Router );
 
-import Home from '@/routes/Home.vue'
-import About from '@/routes/About.vue'
+
+import Operation from '@/routes/Operation.vue'
+import Analysis from '@/routes/Analysis.vue'
+import Liveview from '@/routes/Liveview.vue'
+import Overview from '@/routes/Overview.vue'
 
 
 export default new Router({
     routes: [
-        { path:"/",      name:"Home",  component: Home, props: { name: "DemoApp"} },
-        { path:"/about", name:"About", component: About },
+        { path:"/operation", name:"Operation", component: Operation },
+        { path:"/analysis", name:"Analysis", component: Analysis },
+        { path:"/liveview", name:"Liveview", component: Liveview },
+        { path:"/overview", name:"Overview", component: Overview },
     ]
 });

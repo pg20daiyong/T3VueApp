@@ -27,7 +27,7 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
         constructor( name, subComponentList = []) {
             super( name, subComponentList );
             this.vm = {
-                title: "Demo Vue App",
+                title: "LiveOps App",
                 subtitle: "VFS Programming for Games",
             }
         }
@@ -73,7 +73,7 @@ export default {
     .title h1, .title h3 {
         float:right;
         margin-right: 2vw;
-        text-align:right;
+        text-align: left;
         width: 100%;
     }
 </style>
