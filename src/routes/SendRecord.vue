@@ -9,6 +9,8 @@
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
+          <option value="3">4</option>
+          <option value="3">5</option>
         </select>
       </div>
       <div class="item">
@@ -30,6 +32,7 @@
 
 <script>
   import Controller from '@/mixins/controller'
+  
   import { mapActions, mapGetters } from 'vuex'
 
   class SendRecordController extends Controller {

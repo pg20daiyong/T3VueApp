@@ -11,11 +11,13 @@ Copyright (c) 2018. Daiyong Kim, Kibble Online Inc. All Rights Reserved.
     <section class="analysis-container">
 
         <div class="Analysis">{{ name }} your Vue.js App</div>
+        <Chart></Chart>
     </section>
 
 </template>
 <script>
     import Controller from '@/mixins/controller'
+    import Chart from '@/components/Chart.vue'
 
     class AnalysisController extends Controller {
 
@@ -27,7 +29,7 @@ Copyright (c) 2018. Daiyong Kim, Kibble Online Inc. All Rights Reserved.
         }
     }
 
-    export default new AnalysisController('pgAnalysis');
+    export default new AnalysisController('pgAnalysis', {Chart});
 
 </script>
 <style>
