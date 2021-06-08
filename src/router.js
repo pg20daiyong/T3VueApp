@@ -23,5 +23,6 @@ export default new Router({
         { path:"/liveview", name:"Liveview", component: Liveview },
         { path:"/overview", name:"Overview", component: Overview },
         { path:"/SendRecord", name:"SendRecord", component: SendRecord },
+
     ]
 });

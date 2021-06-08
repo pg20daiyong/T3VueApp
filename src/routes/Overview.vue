@@ -6,18 +6,19 @@ VFS VUE Single File Component
 Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
 -->
 <template>
-
-
-    <section class="overview-container">
-
-        <div class="Overview">{{ name }} your Vue.js App</div>
-    </section>
-
+  <div class="home">
+    <h1>Welcome to Telemetry App</h1>
+    <chart></chart>
+    <Records title="Death's History"></Records>
+  </div>
 </template>
+
 <script>
     import Controller from '@/mixins/controller'
+    import Records from '@/components/Records.vue'
 
     class OverviewController extends Controller {
+
 
         constructor( name, subComponentList = []) {
             super( name, subComponentList );
@@ -26,9 +27,10 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
             }
         }
     }
-
-    export default new OverviewController('pgOverview');
-
+   
+    export default new OverviewController('pgOverview', {Records});
+    
+    
 </script>
 <style>
 /* Local styles for this template */
