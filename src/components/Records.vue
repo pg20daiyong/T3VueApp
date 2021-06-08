@@ -19,6 +19,7 @@
 </template>
 
 <script>
+  import GameOjbect from '@/model/GameObject.js'
   import Controller from '@/mixins/controller'
   import { mapActions, mapGetters } from 'vuex'
 
@@ -35,6 +36,10 @@
         } 
         this.injectActions(mapActions(['doFetchRecords']));
         this.injectGetters(mapGetters(['getRecords']));
+    }
+
+    gameObjectSetting(){
+       // todo
     }
 
     onBeforeMount() {
