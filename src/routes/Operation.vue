@@ -9,21 +9,31 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
 
 
     <section class="operation-container">
+        <h2>Welcome to {{ name }}</h2>
 
-        <div class="Operation">{{ name }} your Vue.js App</div>
+        <!-- <div class="Operation">{{ name }} your Vue.js App</div> -->
+        <div title="Welcome to Operation Page"/>
+         <button  @click="modifyData">Modify Data</button>
     </section>
 
 </template>
 <script>
     import Controller from '@/mixins/controller'
+    
 
     class OperationController extends Controller {
 
         constructor( name, subComponentList = []) {
             super( name, subComponentList );
             this.vm = {
-                name: 'Operation',
             }
+            this.props = {
+                name: String,
+            }
+        }
+
+        modifyData() {
+            this.$router.push("SendRecord");
         }
     }
 

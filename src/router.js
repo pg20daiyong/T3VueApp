@@ -13,13 +13,15 @@ import Operation from '@/routes/Operation.vue'
 import Analysis from '@/routes/Analysis.vue'
 import Liveview from '@/routes/Liveview.vue'
 import Overview from '@/routes/Overview.vue'
+import SendRecord from '@/routes/SendRecord.vue'
 
 
 export default new Router({
     routes: [
-        { path:"/operation", name:"Operation", component: Operation },
+        { path:"/operation", name:"Operation", component: Operation , props: { name : "Modify Data"}},
         { path:"/analysis", name:"Analysis", component: Analysis },
         { path:"/liveview", name:"Liveview", component: Liveview },
         { path:"/overview", name:"Overview", component: Overview },
+        { path:"/SendRecord", name:"SendRecord", component: SendRecord },
     ]
 });
