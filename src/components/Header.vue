@@ -1,10 +1,4 @@
-<!--
-VFS VUE Single File Component
-
-<pg-header></pg-header>
-
-Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
--->
+<!--Copyright 2021 (C) Daiyong Kim, All Rights Reserved-->
 <template>
 
     <header id="header-wrapper" class="grid-header area vue-component">

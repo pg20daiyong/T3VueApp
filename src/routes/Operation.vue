@@ -1,4 +1,4 @@
-<!--Copyright 2021 (C) Daiyong Kim-->
+<!--Copyright 2021 (C) Daiyong Kim, All Rights Reserved-->
 <template>
 
 

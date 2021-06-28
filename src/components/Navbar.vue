@@ -1,10 +1,4 @@
-<!--
-VFS VUE Single File Component
-
-<pg-navbar></pg-navbar>
-
-Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
--->
+<!--Copyright 2021 (C) Daiyong Kim, All Rights Reserved-->
 <template>
 
     <nav id="navigation-wrapper" class="grid-nav area vue-component">

@@ -1,10 +1,4 @@
-<!--
-<some-tag-name title="My Component">
-    -- user can add their own HTML code here, replaces 'slot' component --
-</some-tag-name>
-
-@copyright (c) 2019. Scott Henshaw. All Rights Reserved.
--->
+<!--Copyright 2021 (C) Daiyong Kim, All Rights Reserved-->
 <template>
 
     <section class="component-style">  <!-- Just one main element per template -->
