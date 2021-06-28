@@ -1,10 +1,4 @@
-<!--
-AnalysisController File Component
-
-<pg-about name="User"></pg-about>
-
-Copyright (c) 2018. Daiyong Kim, Kibble Online Inc. All Rights Reserved.
--->
+<!--Copyright 2021 (C) Daiyong Kim-->
 <template>
 
 
@@ -26,7 +20,12 @@ Copyright (c) 2018. Daiyong Kim, Kibble Online Inc. All Rights Reserved.
             this.vm = {
                 name: 'Analysis',
             }
+            // this.props = {
+            //     records :[]
+            // }
+            //this.injectGetters(['getRecords']);
         }
+        
     }
 
     export default new AnalysisController('pgAnalysis', {Chart});

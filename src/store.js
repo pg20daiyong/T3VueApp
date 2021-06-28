@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import Axios from 'axios'
 
 Vue.use( Vuex, Axios );
-//Vue.use( Vuex);
+Vue.use( Vuex);
 
 
 export default new Vuex.Store({
@@ -16,12 +16,25 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    doSendRecord({commit}, data) {
-
+    doSendRecord({ commit }, data) {
+      //console.log(data)
+      Axios('http://127.0.0.1:3000/', { method:'POST',         
+        data: data
+      })
+      .then(response => response.status)
+      .catch(err => console.warn(err));
     }
     ,
-    doFetchRecords({commit}) {
-
+    doFetchRecords({ commit }) {
+      Axios('http://localhost:3000/', { method:'GET'})
+      .then(response => response.data)
+      .then(data=> 
+        {
+          //console.log(data);
+          //commit('setRecords', JSON.parse(data.toString()));
+          commit('setRecords', data);
+        })
+      .catch(err => console.warn(err));
       
     }
   },

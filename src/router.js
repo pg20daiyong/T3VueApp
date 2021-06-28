@@ -18,11 +18,17 @@ import SendRecord from '@/routes/SendRecord.vue'
 
 export default new Router({
     routes: [
-        { path:"/operation", name:"Operation", component: Operation , props: { name : "Modify Data"}},
-        { path:"/analysis", name:"Analysis", component: Analysis },
-        { path:"/liveview", name:"Liveview", component: Liveview },
-        { path:"/overview", name:"Overview", component: Overview },
-        { path:"/SendRecord", name:"SendRecord", component: SendRecord },
+        { path: "/operation", name: "Operation", component: Operation , props: true},// props: { name: "Modify Data" } },
+        { path: "/analysis", name: "Analysis", component: Analysis , props: true},
+        { path: "/liveview", name: "Liveview", component: Liveview , props: true},
+        { path: "/overview", name: "Overview", component: Overview , props: true},
+        { path: "/SendRecord", name: "SendRecord", component: SendRecord }
+        // , {
+        //     children:
+        //         [
+        //             { path: "/chart", name: "Chart", component: CharacterData, props: true }
+        //         ]
+        // }
 
     ]
 });

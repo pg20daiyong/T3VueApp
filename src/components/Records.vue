@@ -1,17 +1,31 @@
+<!--Copyright 2021 (C) Daiyong Kim-->
+
 <template>
   <div class="content">
     <h2>{{ title }}</h2>
     <table>
         <tbody>
             <tr class="tableHeader">  
-                <td> Date </td>
-                <td class="tableHeaderMid"> Map Section </td>
-                <td> Position </td>
+                <td> sessionID </td>
+                <td class="tableHeaderMid"> TimeStamp </td>
+                <td> Action </td>
+                <td class="tableHeaderMid"> teamID </td>
+                <td> botID </td>
+                <td class="tableHeaderMid"> xLocation </td>
+                <td> zLocation </td>
+                <td class="tableHeaderMid"> xHeading </td>
+                <td> zHeading </td>
             </tr>
-            <tr class="tableContent" v-for="(item, index) in getRecords" :key="index">
-                <td>{{ item['Date'] }}</td>
-                <td class="tableContentMid">{{ item['MapSection'] }}</td>
-                <td>({{ item['PosX'] }}, {{ item['PosY'] }}, {{ item['PosZ'] }})</td>
+            <tr class="tableContent" v-for="(item, index) in getRecords.data" :key="index">              
+                <td>{{ item.sessionID }}</td>
+                <td class="tableContentMid">{{ item.timestamp }}</td>
+                <td>{{ item.action }}</td>
+                <td>{{ item.teamID }}</td>
+                <td>{{ item.botID }}</td>
+                <td>{{ item.xLocation }}</td>
+                <td>{{ item.zLocation }}</td>
+                <td>{{ item.xHeading }}</td>
+                <td>{{ item.zHeading }}</td>
             </tr>
         </tbody>
     </table>
@@ -25,6 +39,7 @@
 
   class RecordsController extends Controller {
 
+    
     constructor( name, subComponentList = []) 
     {
         super( name, subComponentList )
@@ -34,8 +49,9 @@
         this.props = { // props are passed in when using this component
           title: String
         } 
-        this.injectActions(mapActions(['doFetchRecords']));
-        this.injectGetters(mapGetters(['getRecords']));
+        this.injectActions(mapActions(['doFetchRecords']));        
+        this.injectGetters(mapGetters(['getRecords']));   
+        
     }
 
     gameObjectSetting(){
@@ -43,11 +59,13 @@
     }
 
     onBeforeMount() {
-        this.doFetchRecords();
+        this.doFetchRecords();        
+        //console.log(this.$store.state.records);   
     }
-  }
-
+  }  
   export default new RecordsController('records'/* , { subComponent, anotherComponent } */);
+
+  
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -73,6 +91,8 @@ table {
     margin-left:auto; 
     margin-right:auto;
     border-spacing: 0px;
+    height:300px; 
+    overflow:auto;
 }
 td {
     padding: 10px;

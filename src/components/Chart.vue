@@ -1,3 +1,5 @@
+
+<!--Copyright 2021 (C) Daiyong Kim-->
 <template>
   <div class="Content">
     <canvas class="chart" ref="canvas" width="600" height="250" style="display: inline"></canvas>
@@ -14,13 +16,27 @@ export default {
     mounted () {
        //The data for our dataset
         let records = this.$store.state.records;
+        //console.log(records.data)
+
+        var team0 = 0;
+        var team1 = 0;
+
+        for(var i=0; i<records.data.length; i++){
+          //console.log(records.data[i].teamID)
+          if(records.data[i].teamID === 0) team0++; 
+        }
+        console.log(team0)
+        console.log(team1 = records.data.length - team0)
+        // to modify ? 
+        // what is better way to show graph
+        
         let data = {
-            labels: ['Section1', 'Section2', 'Section3', 'Section4', 'Section5'],
+            labels: ['Team0', 'Team1'],
             datasets: [{
                 label: 'Deaths by Section',
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [2, 1, 3, 4, 6, 10]
+                data: [team0, team1]
                 }]
             };
             // Configuration options go here

@@ -1,0 +1,37 @@
+Release Notes.txt (A3: Running Client App)
+
+Name of product : LiveOps Web Application
+Data : June 23th, 2021
+Member : Daiyong Kim
+
+How to use the product :
+
+
+1. Download Source code : git clone -b develop --single-branch https://github.com/pg20daiyong/T3VueApp.git
+2. Go to source directory : npm install
+3. Run Application : npm run serve
+4. Open Browser : http://127.0.0.1:4000
+
+server)
+go to client directory
+ npm install express
+ npm install --save cors
+ run > node app
+
+
+
+Menu
+Overview
+ - some information(developing)
+Liveview
+ - it shows inforamtion about virtual game status on the map
+Analysis
+ - it shows about graph about game information
+Operation
+ - Can modify some data if editor want to change information
+
+caveats 
+- Overview is not implenent yet
+- GameObject is too small, all information is hard coded.(working on add some gameobject information)
+
+

@@ -2,10 +2,8 @@
  *   Copyright (c) 2019 Kibble Online, in cooperation with Vancouver Film School
  *   All rights reserved.
  */
-import Store from '../store.js'
-import Router from '../router.js'
-
-import { mapActions, mapGetters } from 'vuex'
+ import Store from '../store.js'
+ import Router from '../router.js'
 
 export default class Controller {
 
@@ -23,9 +21,14 @@ export default class Controller {
         this._extractMethods(['compute_', 'compute','on_', 'on', 'vue_', 'vue', 'get_', 'get']);
     }
 
-    injectActions( actionMap ) { Object.assign( this.methods, mapActions( actionMap ))}
-    injectGetters( gettersMap ) { Object.assign( this.computed, mapGetters( gettersMap ))}
+    injectActions( newActions ){
+        Object.assign( this.methods, newActions );
+    }
 
+    injectGetters( newGetters ){
+        Object.assign( this.computed, newGetters );
+    }
+        
     _extractMethods( prefixList ) {
 
         // Private helper
@@ -46,14 +49,19 @@ export default class Controller {
 
                     delete this.methods[ methodName ];
                     let newName = _strip( methodName, prefix );
+                    newName = newName.charAt(0).toLowerCase() + newName.slice(1);
                     switch (prefix) {
-
                         case "compute_":
-                        case "on_":
+                        case "compute":
+                        case "get_":
+                        case "get":
                             this.computed[ newName ] = localMethods[ methodName ];
                             break;
 
+                        case "on_":
+                        case "on":
                         case "vue_":
+                        case "vue":
                             // Add hooks here...
                             /*
                             this.beforeCreate()

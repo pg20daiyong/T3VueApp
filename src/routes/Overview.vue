@@ -8,7 +8,7 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
 <template>
   <div class="home">
     <h1>Welcome to Telemetry App</h1>
-    <chart></chart>
+    <!-- <Chart></Chart> -->
     <Records title="Death's History"></Records>
   </div>
 </template>
@@ -16,6 +16,7 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
 <script>
     import Controller from '@/mixins/controller'
     import Records from '@/components/Records.vue'
+
 
     class OverviewController extends Controller {
 

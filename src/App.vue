@@ -1,7 +1,5 @@
-<!--
-<pg-app></pg-app>
-@copyright (c) 2018. Scott Henshaw, Clinton Jay Ramonida. All Rights Reserved.
--->
+<!--Copyright 2021 (C) Daiyong Kim-->
+
 <template>
 
     <main class="grid-frame vue-main-rootcomponent">
