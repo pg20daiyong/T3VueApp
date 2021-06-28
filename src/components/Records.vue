@@ -5,7 +5,7 @@
     <h2>{{ title }}</h2>
     <table>
         <tbody>
-            <tr class="tableHeader">  
+            <tr class="tableHeader" >  
                 <td> sessionID </td>
                 <td class="tableHeaderMid"> TimeStamp </td>
                 <td> Action </td>
@@ -20,11 +20,11 @@
                 <td>{{ item.sessionID }}</td>
                 <td class="tableContentMid">{{ item.timestamp }}</td>
                 <td>{{ item.action }}</td>
-                <td>{{ item.teamID }}</td>
+                <td class="tableContentMid">{{ item.teamID }}</td>
                 <td>{{ item.botID }}</td>
-                <td>{{ item.xLocation }}</td>
+                <td class="tableContentMid">{{ item.xLocation }}</td>
                 <td>{{ item.zLocation }}</td>
-                <td>{{ item.xHeading }}</td>
+                <td class="tableContentMid">{{ item.xHeading }}</td>
                 <td>{{ item.zHeading }}</td>
             </tr>
         </tbody>

@@ -22,16 +22,19 @@ go to client directory
 
 Menu
 Overview
- - some information(developing)
+ - some information
 Liveview
- - it shows inforamtion about virtual game status on the map
+ - it shows inforamtion about virtual game status on the map(developing)
 Analysis
  - it shows about graph about game information
 Operation
  - Can modify some data if editor want to change information
 
 caveats 
-- Overview is not implenent yet
+- When you start, you have to click overview first(Data can download from server)
+- LiveView is not implenent yet
+- Operation - data modification is not possible
+  - it send the data to server(but server is mock server, it send only statusCode=200)
 - GameObject is too small, all information is hard coded.(working on add some gameobject information)
 
 

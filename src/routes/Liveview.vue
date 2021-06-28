@@ -1,21 +1,17 @@
-<!--
-VFS VUE Single File Component
-
-<pg-about name="User"></pg-about>
-
-Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
--->
+<!--Copyright 2021 (C) Daiyong Kim-->
 <template>
 
 
     <section class="liveview-container">
 
         <div class="Liveview">{{ name }} your Vue.js App</div>
+        <PositionChart></PositionChart>
     </section>
 
 </template>
 <script>
     import Controller from '@/mixins/controller'
+    import PositionChart from '@/components/PositionChart.vue'
 
     class LiveviewController extends Controller {
 
@@ -27,7 +23,7 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
         }
     }
 
-    export default new LiveviewController('pgLiveview');
+    export default new LiveviewController('pgLiveview',  {PositionChart});
 
 </script>
 <style>
