@@ -6,18 +6,17 @@ Member : Daiyong Kim
 
 How to use the product :
 
+npm install express
+npm install --save cors
+
 
 1. Download Source code : git clone -b develop --single-branch https://github.com/pg20daiyong/T3VueApp.git
 2. Go to source directory : npm install
-3. Run Application : npm run serve
-4. Open Browser : http://127.0.0.1:4000
-
-server)
-go to client directory
- npm install express
- npm install --save cors
- run > node app
-
+3. Run Client Application : npm run client
+4. Run Server Application : npm run server
+5. Open Browser : http://127.0.0.1:4000
+  -> go to Overview (it request(get) http://127.0.0.1:3000/getdata and shows table)
+  -> go to Operation (it sends(post) http://127.0.0.1:3000/senddata)
 
 
 Menu
@@ -32,9 +31,8 @@ Operation
 
 caveats 
 - When you start, you have to click overview first(Data can download from server)
-- LiveView is not implenent yet
-- Operation - data modification is not possible
-  - it send the data to server(but server is mock server, it send only statusCode=200)
-- GameObject is too small, all information is hard coded.(working on add some gameobject information)
+- Operation - data modification (http://127.0.0.1:3000/senddata)
+  - it send the data to server(but server returns only statusCode=200)
+
 
 
