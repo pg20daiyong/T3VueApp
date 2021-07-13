@@ -18,7 +18,7 @@ export default new Vuex.Store({
   actions: {
     doSendRecord({ commit }, data) {
       //console.log(data)
-      Axios('http://127.0.0.1:3000/', { method:'POST',         
+      Axios('http://127.0.0.1:3000/senddata', { method:'POST',         
         data: data
       })
       .then(response => response.status)
@@ -26,7 +26,7 @@ export default new Vuex.Store({
     }
     ,
     doFetchRecords({ commit }) {
-      Axios('http://localhost:3000/', { method:'GET'})
+      Axios('http://127.0.0.1:3000/getdata', { method:'GET'})
       .then(response => response.data)
       .then(data=> 
         {

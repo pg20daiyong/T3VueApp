@@ -10,13 +10,13 @@ fs.readFile('test.json', 'utf8', function(err, data){
     result = data;    
 });
 
-app.post('/', function (req, res) {
+app.post('/senddata', function (req, res) {
     //res.send('POST request to the homepage');
     //mock server    
     res.statusCode = 200;
 });
 
-app.get('/', (req, res) => {
+app.get('/getdata', (req, res) => {
     //console.log(result)
     res.send(result);
     res.statusCode = 200;
