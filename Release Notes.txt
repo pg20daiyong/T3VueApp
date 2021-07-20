@@ -1,22 +1,17 @@
-Release Notes.txt (A3: Running Client App)
+Release Notes.txt (A2: Cloud Data)
 
 Name of product : LiveOps Web Application
-Data : June 23th, 2021
+Data : July 19th, 2021
 Member : Daiyong Kim
 
 How to use the product :
 
-npm install express
-npm install --save cors
-
+npm install firebase vuefire
 
 1. Download Source code : git clone -b develop --single-branch https://github.com/pg20daiyong/T3VueApp.git
-2. Go to source directory : npm install
-3. Run Client Application : npm run client
-4. Run Server Application : npm run server
+2. Go to source directory : npm install firebase vuefire (added)
+34. Run Server Application : npm run server (or vue ui)
 5. Open Browser : http://127.0.0.1:4000
-  -> go to Overview (it request(get) http://127.0.0.1:3000/getdata and shows table)
-  -> go to Operation (it sends(post) http://127.0.0.1:3000/senddata)
 
 
 Menu
@@ -27,12 +22,13 @@ Liveview
 Analysis
  - it shows about graph about game information
 Operation
- - Can modify some data if editor want to change information
+ - Can modify some data if editor want to change information 
+
 
 caveats 
 - When you start, you have to click overview first(Data can download from server)
-- Operation - data modification (http://127.0.0.1:3000/senddata)
-  - it send the data to server(but server returns only statusCode=200)
+- Operation - data modification 
+   - But, there is no unique id, you can not update now.
 
 
 
